@@ -1,0 +1,41 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : simple_rtl
+Version: T-2022.03-SP4
+Date   : Tue Mar 19 14:16:10 2024
+****************************************
+
+Operating Conditions: PVT_0P9V_125C   Library: slow_vdd1v0
+Wire Load Model Mode: top
+
+  Startpoint: S0_reg (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: S0 (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  S0_reg/CK (DFFQXL)                     0.0000     0.0000 r
+  S0_reg/Q (DFFQXL)                      0.1830     0.1830 f
+  S0 (out)                               0.0000     0.1830 f
+  data arrival time                                 0.1830
+
+  clock clk (rise edge)                 11.0000    11.0000
+  clock network delay (ideal)            0.0000    11.0000
+  clock uncertainty                     -0.0500    10.9500
+  output external delay                 -0.4000    10.5500
+  data required time                               10.5500
+  -----------------------------------------------------------
+  data required time                               10.5500
+  data arrival time                                -0.1830
+  -----------------------------------------------------------
+  slack (MET)                                      10.3670
+
+
+1

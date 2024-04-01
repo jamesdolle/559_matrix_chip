@@ -1,0 +1,21 @@
+ 
+****************************************
+Report : cell
+Design : simple_rtl
+Version: T-2022.03-SP4
+Date   : Tue Mar 19 14:16:10 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+S0_reg                    DFFQXL          slow_vdd1v0       5.4720  n
+--------------------------------------------------------------------------------
+Total 1 cells                                               5.4720
+1
