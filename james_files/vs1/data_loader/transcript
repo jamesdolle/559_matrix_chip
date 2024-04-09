@@ -1,0 +1,21 @@
+# waveform.wlf opened as dataset "waveform"
+add wave -position insertpoint  \
+waveform:/data_loader_tb/x1/data
+add wave -position insertpoint  \
+waveform:/data_loader_tb/data_send
+add wave -position insertpoint  \
+waveform:/data_loader_tb/CLK
+add wave -position insertpoint  \
+waveform:/data_loader_tb/data_send
+add wave -position insertpoint  \
+waveform:/data_loader_tb/x1/data
+add wave -position insertpoint  \
+waveform:/data_loader_tb/x1/C2
+add wave -position insertpoint  \
+waveform:/data_loader_tb/x1/R1
+add wave -position insertpoint  \
+waveform:/data_loader_tb/x1/C1
+add wave -position insertpoint  \
+waveform:/data_loader_tb/x1/R2
+add wave -position insertpoint  \
+waveform:/data_loader_tb/x1/C2
