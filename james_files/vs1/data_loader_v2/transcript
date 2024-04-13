@@ -1,0 +1,7 @@
+# waveform2.wlf opened as dataset "waveform2"
+add wave -position insertpoint  \
+waveform2:/data_loader_tb/loader/data_flop/CLK
+add wave -position insertpoint  \
+waveform2:/data_loader_tb/loader/data_flop/a
+add wave -position insertpoint  \
+waveform2:/data_loader_tb/loader/data_flop/x
