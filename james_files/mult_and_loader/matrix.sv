@@ -1,13 +1,12 @@
 module matrix(
     input wire CLK,
-    input reg [31:0] flat_matrix_1 [0:4],
-    input reg [31:0] flat_matrix_2 [0:4],
+    input reg [31:0] flat_matrix_1 [0:7],
+    input reg [31:0] flat_matrix_2 [0:7],
     input reg [3:0] R1,
     input reg [3:0] C1,
     input reg [3:0] R2,
     input reg [3:0] C2,
     input wire readybit
-
 );
 
     parameter X_DIM = 2;
@@ -17,14 +16,11 @@ module matrix(
     reg [127:0] matrix_2 [0:Y_DIM][0:X_DIM];
     reg [127:0] rslt [0:Y_DIM][0:X_DIM];
 
-
-
     integer x, y, z;
     integer i, j, k;
     integer index;
 
     always @(posedge CLK) begin
-
 
         if(readybit) begin
             index = 0;
@@ -40,7 +36,6 @@ module matrix(
                     matrix_2[i][j] = flat_matrix_2[index++];
                 end
             end
-
 
             $display("matrix unflattened");
             $display(matrix_1[0][0], matrix_1[0][1]);

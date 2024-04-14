@@ -9,8 +9,8 @@ module loader(
     parameter Y_DIM = 2;
     parameter X_DIM = 2;
 
-    reg [31:0] matrix_1 [0:4];
-    reg [31:0] matrix_2 [0:4];
+    reg [31:0] matrix_1 [0:7];
+    reg [31:0] matrix_2 [0:7];
 
     reg [3:0] R1;
     reg [3:0] C1;

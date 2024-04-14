@@ -12,13 +12,11 @@ module data_loader_tb();
 
         $dumpfile("waveform.vcd"); // Specifies the name of the dump file
         $dumpvars(0, data_loader_tb);   // Dumps all variables in the module "testbench" and its submodules
-        //$dumpvars(1, data_loader_tb.x1); // For a specific submodule
-        //$dumpvars(0, matrix);   // Dumps all variables in the module "testbench" and its submodules
         CLK = 0;
         count = 0;
         data_send = 2;
         ctrl_logic = 1;
-        forever #1 CLK = ~CLK;
+        forever #0.5 CLK = ~CLK;
     end
 
     //always #5 CLK=~CLK; //clock toggle every 0.5 ns
@@ -38,7 +36,7 @@ module data_loader_tb();
                 ctrl_logic <= 1;
             end
             4'h3: begin
-                data_send <= 2;
+                data_send <= 8;
                 ctrl_logic <= 1;
             end
             4'h4: begin
@@ -62,7 +60,7 @@ module data_loader_tb();
                 ctrl_logic <= 0;
             end
             4'h9: begin
-                data_send <= 7;
+                data_send <= 9;
                 ctrl_logic <= 0;
             end
             4'hA: begin
@@ -70,11 +68,6 @@ module data_loader_tb();
                 ctrl_logic <= 0;
             end
             4'hB: begin
-                data_send <= 2;
-                ctrl_logic <= 0;
-            end
-            4'hC: begin
-                #5
                 $display("matrix loaded");
                 $display(loader.matrix_1[0], loader.matrix_1[1]);
                 $display(loader.matrix_1[2], loader.matrix_1[3]);
