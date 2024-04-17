@@ -1,0 +1,57 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : MatrixMultiplier
+Version: T-2022.03-SP4
+Date   : Wed Apr 17 16:20:32 2024
+****************************************
+
+
+Library(s) Used:
+
+    slow_vdd1v0 (File: /home/ece558_658_2023/rlester/ece559/synth/gpdk045_slow.db)
+
+
+Operating Conditions: PVT_0P9V_125C   Library: slow_vdd1v0
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 906.6631 uW   (67%)
+  Net Switching Power  = 453.9218 uW   (33%)
+                         ---------
+Total Dynamic Power    =   1.3606 mW  (100%)
+
+Cell Leakage Power     = 203.4760 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.1758            0.0000            0.0000            0.1758  (  12.92%)  i
+register       2.2496e-02        5.6455e-04        8.3200e+03        2.3069e-02  (   1.70%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.7083            0.4534        1.9515e+05            1.1619  (  85.38%)
+--------------------------------------------------------------------------------------------------
+Total              0.9067 mW         0.4539 mW     2.0347e+05 pW         1.3608 mW
+1
