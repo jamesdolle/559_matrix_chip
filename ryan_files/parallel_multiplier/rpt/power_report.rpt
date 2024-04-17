@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : MatrixMultiplier
 Version: T-2022.03-SP4
-Date   : Wed Apr 17 18:20:37 2024
+Date   : Wed Apr 17 19:28:11 2024
 ****************************************
 
 
@@ -35,12 +35,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  = 903.3625 uW   (67%)
-  Net Switching Power  = 451.3272 uW   (33%)
+  Cell Internal Power  = 240.2547 uW   (67%)
+  Net Switching Power  = 116.2266 uW   (33%)
                          ---------
-Total Dynamic Power    =   1.3547 mW  (100%)
+Total Dynamic Power    = 356.4813 uW  (100%)
 
-Cell Leakage Power     = 203.0546 nW
+Cell Leakage Power     = 176.4426 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -49,10 +49,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.1802            0.0000            0.0000            0.1802  (  13.30%)  i
-register       2.3080e-02        5.4746e-04        8.4513e+03        2.3636e-02  (   1.74%)
+clock_network  5.4684e-02            0.0000            0.0000        5.4684e-02  (  15.33%)  i
+register       6.9660e-03        1.4807e-04        8.5051e+03        7.1226e-03  (   2.00%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.7001            0.4508        1.9460e+05            1.1510  (  84.95%)
+combinational      0.1786            0.1161        1.6793e+05            0.2949  (  82.67%)
 --------------------------------------------------------------------------------------------------
-Total              0.9034 mW         0.4513 mW     2.0305e+05 pW         1.3549 mW
+Total              0.2403 mW         0.1162 mW     1.7644e+05 pW         0.3567 mW
 1

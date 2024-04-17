@@ -6,15 +6,15 @@ Report : timing
         -max_paths 1
 Design : MatrixMultiplier
 Version: T-2022.03-SP4
-Date   : Wed Apr 17 18:20:35 2024
+Date   : Wed Apr 17 19:28:10 2024
 ****************************************
 
 Operating Conditions: PVT_0P9V_125C   Library: slow_vdd1v0
 Wire Load Model Mode: top
 
-  Startpoint: loaded_num_b0[0]
+  Startpoint: loaded_num_b2[0]
               (input port clocked by clk)
-  Endpoint: result1_reg_reg[13]
+  Endpoint: result3_reg_reg[14]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -24,45 +24,53 @@ Wire Load Model Mode: top
   clock clk (rise edge)                  0.0000     0.0000
   clock network delay (ideal)            0.0000     0.0000
   input external delay                   0.1000     0.1000 r
-  loaded_num_b0[0] (in)                  0.0137     0.1137 r
-  U4080/Y (INVX3)                        0.0471     0.1608 f
-  U8090/Y (NAND2BX1)                     0.0970     0.2578 f
-  U6459/Y (INVXL)                        0.0590     0.3168 r
-  U4738/Y (NAND2BX1)                     0.0673     0.3841 f
-  U4403/Y (OAI2BB1X1)                    0.0620     0.4461 r
-  U4246/Y (INVX1)                        0.0408     0.4868 f
-  U4249/Y (XNOR2XL)                      0.1051     0.5920 f
-  U6184/Y (XNOR2X1)                      0.1661     0.7580 r
-  U5959/Y (INVX1)                        0.0359     0.7939 f
-  U8093/Y (XOR2XL)                       0.1761     0.9700 r
-  U8094/Y (XOR2XL)                       0.1361     1.1061 f
-  U6021/Y (XNOR2XL)                      0.1487     1.2548 r
-  U6020/Y (XNOR2XL)                      0.1425     1.3973 r
-  U4524/Y (NAND2BXL)                     0.0607     1.4580 r
-  U8147/Y (AND4XL)                       0.2983     1.7563 r
-  U5140/Y (NOR3X1)                       0.0397     1.7960 f
-  U4165/Y (NAND3BX1)                     0.1648     1.9609 f
-  U4642/Y (NAND3X1)                      0.0970     2.0579 r
-  U4155/Y (AND3XL)                       0.1765     2.2344 r
-  U4148/Y (NAND2BX1)                     0.0677     2.3021 r
-  U4147/Y (NAND2XL)                      0.0643     2.3664 f
-  U7072/Y (NAND2BXL)                     0.0539     2.4203 r
-  U5087/Y (NAND4X1)                      0.1194     2.5397 f
-  U4833/Y (NAND2XL)                      0.1078     2.6475 r
-  result1_reg_reg[13]/D (DFFRHQX1)       0.0000     2.6475 r
-  data arrival time                                 2.6475
+  loaded_num_b2[0] (in)                  0.0302     0.1302 r
+  U6438/Y (INVX2)                        0.0626     0.1928 f
+  U6655/Y (NAND2BX1)                     0.1035     0.2963 f
+  U6194/Y (OR2XL)                        0.1279     0.4241 f
+  U3320/Y (OAI2BB1XL)                    0.0521     0.4763 r
+  U3993/Y (XNOR2XL)                      0.1693     0.6455 f
+  U6657/Y (XOR2XL)                       0.1791     0.8247 r
+  U6259/Y (OAI2BB1X1)                    0.1283     0.9530 r
+  U6258/Y (OAI2BB1X1)                    0.0723     1.0253 f
+  U3319/Y (OAI2BB1XL)                    0.0643     1.0895 r
+  U3575/Y (NAND3BXL)                     0.0984     1.1879 f
+  U4019/Y (AO22X1)                       0.1806     1.3685 f
+  U6144/Y (OAI21X1)                      0.0672     1.4357 r
+  U6143/Y (OAI2BB1X1)                    0.1046     1.5403 f
+  U4186/Y (OAI2BB1X1)                    0.0763     1.6166 r
+  U3979/Y (OAI2BB1X1)                    0.0692     1.6857 f
+  U6744/Y (NAND2BX1)                     0.1000     1.7858 f
+  U4463/Y (OAI2BB1X1)                    0.1083     1.8941 f
+  U6304/Y (INVXL)                        0.0576     1.9516 r
+  U6776/Y (XOR2XL)                       0.1376     2.0892 f
+  U4097/Y (XOR2XL)                       0.1785     2.2677 r
+  U4455/Y (INVXL)                        0.0440     2.3117 f
+  U6797/Y (NAND2BX1)                     0.0963     2.4081 f
+  U6798/Y (OAI2BB1XL)                    0.0544     2.4625 r
+  U6234/Y (INVXL)                        0.0544     2.5169 f
+  U6233/Y (NAND2BX1)                     0.0476     2.5645 r
+  U4130/Y (INVX1)                        0.0376     2.6021 f
+  U6822/Y (AOI211X2)                     0.0927     2.6948 r
+  U6307/Y (AOI2BB1X1)                    0.0686     2.7633 f
+  U6282/Y (OAI2BB1X1)                    0.0419     2.8052 r
+  U3340/Y (OAI2BB1X1)                    0.0782     2.8835 f
+  U3957/Y (XOR2XL)                       0.1329     3.0164 r
+  U6823/Y (MX2XL)                        0.1424     3.1587 r
+  result3_reg_reg[14]/D (DFFRHQX1)       0.0000     3.1587 r
+  data arrival time                                 3.1587
 
-  clock clk (rise edge)                  1.0000     1.0000
-  clock network delay (ideal)            0.0000     1.0000
-  clock uncertainty                     -0.0500     0.9500
-  result1_reg_reg[13]/CK (DFFRHQX1)      0.0000     0.9500 r
-  library setup time                    -0.1315     0.8185
-  data required time                                0.8185
+  clock clk (rise edge)                  3.3300     3.3300
+  clock network delay (ideal)            0.0000     3.3300
+  clock uncertainty                     -0.0500     3.2800
+  result3_reg_reg[14]/CK (DFFRHQX1)      0.0000     3.2800 r
+  library setup time                    -0.1211     3.1589
+  data required time                                3.1589
   -----------------------------------------------------------
-  data required time                                0.8185
-  data arrival time                                -2.6475
+  data required time                                3.1589
+  data arrival time                                -3.1587
   -----------------------------------------------------------
-  slack (VIOLATED)                                 -1.8290
+  slack (MET)                                       0.0001
 
 
 1
