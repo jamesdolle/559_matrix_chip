@@ -8,7 +8,7 @@ module MatrixMultiplier (
 );
 
 // Declare reg outputs
-reg [15:0] result1_reg, result2_reg, result3_reg, result4_reg;
+reg [15:0] result1_reg, result2_reg, result3_reg, result4_reg; // internal to MatrixMultiplier
 
 // Reset and initialization
 always @(posedge clk or posedge rst) begin
@@ -31,8 +31,8 @@ always @(posedge clk or posedge rst) begin
 end
 
 // Assign reg outputs to output ports
-always @* begin
-    result1 = result1_reg;
+always @* begin // sensitivity list that updates whenever resultX_reg values change... might not be good for computation 
+    result1 = result1_reg; // assigns the output reg with the values on internal result_reg's 
     result2 = result2_reg;
     result3 = result3_reg;
     result4 = result4_reg;
