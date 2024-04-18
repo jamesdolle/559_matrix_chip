@@ -49,7 +49,7 @@ module testbench ();
         .multiplication_done(multiplication_done)
     );
 
-    always #0.5ns clk = ~clk;   // Generate clock
+    always #1 clk = ~clk;   // Generate clock
 
     // Testbench
     initial begin
