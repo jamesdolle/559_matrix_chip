@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : MatrixMultiplier
+Version: T-2022.03-SP4
+Date   : Fri Apr 19 11:36:11 2024
+****************************************
+
+Operating Conditions: PVT_0P9V_125C   Library: slow_vdd1v0
+Wire Load Model Mode: top
+
+  Startpoint: pipeline_stage_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pipeline_stage_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  pipeline_stage_reg[1]/CK (DFFRHQX1)    0.0000     0.0000 r
+  pipeline_stage_reg[1]/Q (DFFRHQX1)     0.2175     0.2175 f
+  U1456/Y (OAI2BB1X1)                    0.0928     0.3102 f
+  pipeline_stage_reg[1]/D (DFFRHQX1)     0.0000     0.3102 f
+  data arrival time                                 0.3102
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock uncertainty                      0.0500     0.0500
+  pipeline_stage_reg[1]/CK (DFFRHQX1)    0.0000     0.0500 r
+  library hold time                      0.0014     0.0514
+  data required time                                0.0514
+  -----------------------------------------------------------
+  data required time                                0.0514
+  data arrival time                                -0.3102
+  -----------------------------------------------------------
+  slack (MET)                                       0.2588
+
+
+1

@@ -1,0 +1,72 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MatrixMultiplier
+Version: T-2022.03-SP4
+Date   : Fri Apr 19 11:36:11 2024
+****************************************
+
+Operating Conditions: PVT_0P9V_125C   Library: slow_vdd1v0
+Wire Load Model Mode: top
+
+  Startpoint: pipeline_stage_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: intermediate_result_6_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  pipeline_stage_reg[0]/CK (DFFRHQX1)                   0.0000     0.0000 r
+  pipeline_stage_reg[0]/Q (DFFRHQX1)                    0.2202     0.2202 f
+  U926/Y (INVX1)                                        0.0452     0.2654 r
+  U1792/Y (NAND3BXL)                                    0.1111     0.3765 f
+  U864/Y (INVXL)                                        0.0873     0.4638 r
+  U1410/Y (NAND2BX1)                                    0.1134     0.5773 r
+  U1832/Y (AO22X1)                                      0.2481     0.8254 r
+  U1830/Y (INVX1)                                       0.0578     0.8832 f
+  U2100/Y (NAND2BX1)                                    0.0977     0.9809 f
+  U955/Y (INVXL)                                        0.0561     1.0370 r
+  U924/Y (OAI2BB1X1)                                    0.1323     1.1693 r
+  U1219/Y (OAI2BB1X1)                                   0.0759     1.2452 f
+  U1811/Y (INVX1)                                       0.0532     1.2984 r
+  U922/Y (OAI2BB1X1)                                    0.1374     1.4358 r
+  U1808/Y (INVX1)                                       0.0400     1.4758 f
+  U918/Y (XNOR2X1)                                      0.1600     1.6358 r
+  U1081/Y (XNOR2X1)                                     0.1545     1.7903 r
+  U1807/Y (INVX1)                                       0.0334     1.8237 f
+  U916/Y (XNOR2X1)                                      0.1577     1.9813 r
+  U1012/Y (XOR2XL)                                      0.1737     2.1551 f
+  U2155/Y (NAND2BX1)                                    0.1100     2.2651 f
+  U990/Y (INVX1)                                        0.0532     2.3182 r
+  U912/Y (NAND3BXL)                                     0.0639     2.3822 r
+  U866/Y (AND2XL)                                       0.1175     2.4996 r
+  U1000/Y (OAI2BB1X1)                                   0.0738     2.5734 f
+  U935/Y (INVXL)                                        0.0479     2.6213 r
+  U915/Y (OAI2BB1X1)                                    0.1221     2.7434 r
+  U1873/Y (OAI2BB1X1)                                   0.0729     2.8163 f
+  U1192/Y (XNOR2X1)                                     0.1824     2.9987 r
+  U2208/Y (MX2XL)                                       0.1475     3.1462 r
+  intermediate_result_6_reg[14]/D (DFFRHQX1)            0.0000     3.1462 r
+  data arrival time                                                3.1462
+
+  clock clk (rise edge)                                 3.3300     3.3300
+  clock network delay (ideal)                           0.0000     3.3300
+  clock uncertainty                                    -0.0500     3.2800
+  intermediate_result_6_reg[14]/CK (DFFRHQX1)           0.0000     3.2800 r
+  library setup time                                   -0.1211     3.1589
+  data required time                                               3.1589
+  --------------------------------------------------------------------------
+  data required time                                               3.1589
+  data arrival time                                               -3.1462
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0127
+
+
+1
