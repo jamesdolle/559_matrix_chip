@@ -30,7 +30,7 @@ always @(posedge clk or posedge rst) begin
     end
 end
 
-// Assign reg outputs to output ports
+// assign reg outputs to output ports
 always @* begin // sensitivity list that updates whenever resultX_reg values change... might not be good for computation 
     result1 = result1_reg; // assigns the output reg with the values on internal result_reg's 
     result2 = result2_reg;
