@@ -1,0 +1,9 @@
+# ** Error: (vish-7) Failed to open ini file "/opt/mentor/modelsim/modelsim_dlx/linuxpe/../modelsim.ini" in read mode.
+# No such file or directory. (errno = ENOENT)
+# waveform.wlf opened as dataset "waveform"
+add wave -position insertpoint  \
+waveform:/advanced_tb/CLK
+add wave -position insertpoint  \
+waveform:/advanced_tb/output_mat
+add wave -position insertpoint  \
+waveform:/advanced_tb/data_send
