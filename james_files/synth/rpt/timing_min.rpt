@@ -1,0 +1,44 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : data_loader
+Version: T-2022.03-SP4
+Date   : Mon Apr 22 22:11:25 2024
+****************************************
+
+Operating Conditions: PVT_0P9V_125C   Library: slow_vdd1v0
+Wire Load Model Mode: top
+
+  Startpoint: data[0] (input port clocked by CLK)
+  Endpoint: data_flop/x_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  input external delay                   0.1000     0.1000 f
+  data[0] (in)                           0.0025     0.1025 f
+  data_flop/a[0] (DflopX4)               0.0000     0.1025 f
+  data_flop/x_reg[0]/D (DFFQXL)          0.0000     0.1025 f
+  data arrival time                                 0.1025
+
+  clock CLK (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock uncertainty                      0.0500     0.0500
+  data_flop/x_reg[0]/CK (DFFQXL)         0.0000     0.0500 r
+  library hold time                      0.0058     0.0558
+  data required time                                0.0558
+  -----------------------------------------------------------
+  data required time                                0.0558
+  data arrival time                                -0.1025
+  -----------------------------------------------------------
+  slack (MET)                                       0.0467
+
+
+1

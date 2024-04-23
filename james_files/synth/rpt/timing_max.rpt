@@ -1,0 +1,67 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : data_loader
+Version: T-2022.03-SP4
+Date   : Mon Apr 22 22:11:25 2024
+****************************************
+
+Operating Conditions: PVT_0P9V_125C   Library: slow_vdd1v0
+Wire Load Model Mode: top
+
+  Startpoint: matrix_1_reg[21]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mult/res_mat_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  matrix_1_reg[21]/CK (DFFQX2)           0.0000     0.0000 r
+  matrix_1_reg[21]/Q (DFFQX2)            0.2009     0.2009 r
+  mult/flat_matrix_1[21] (matrix)        0.0000     0.2009 r
+  mult/U330/Y (INVX3)                    0.0526     0.2535 f
+  mult/U6242/Y (NAND2BXL)                0.1031     0.3567 f
+  mult/U5053/Y (OAI2BB1X1)               0.1032     0.4599 f
+  mult/U6802/Y (XOR2XL)                  0.1887     0.6486 r
+  mult/U6806/Y (XOR2XL)                  0.1857     0.8343 f
+  mult/U6816/Y (XOR2XL)                  0.1893     1.0236 r
+  mult/U6817/Y (OAI2BB1XL)               0.1140     1.1375 r
+  mult/U3834/Y (INVXL)                   0.0523     1.1898 f
+  mult/U450/Y (XNOR2X1)                  0.1682     1.3580 r
+  mult/U587/Y (XOR2XL)                   0.1521     1.5101 r
+  mult/U2327/Y (OR2XL)                   0.0860     1.5961 r
+  mult/U11/Y (CLKAND2X3)                 0.0965     1.6926 r
+  mult/U372/Y (NAND2X1)                  0.0688     1.7613 f
+  mult/U1154/Y (AOI32X2)                 0.0870     1.8484 r
+  mult/U617/Y (OAI2BB1X1)                0.1482     1.9966 r
+  mult/U2642/Y (NAND2X1)                 0.0729     2.0695 f
+  mult/U715/Y (CLKXOR2X1)                0.1672     2.2367 r
+  mult/U713/Y (NAND2X2)                  0.0727     2.3094 f
+  mult/U153/Y (AOI2BB2XL)                0.0755     2.3849 r
+  mult/U3051/Y (NOR2BXL)                 0.1004     2.4853 r
+  mult/U6964/Y (AND4XL)                  0.2841     2.7694 r
+  mult/U6965/Y (OR3XL)                   0.0635     2.8329 r
+  mult/res_mat_reg[31]/D (DFFXL)         0.0000     2.8329 r
+  data arrival time                                 2.8329
+
+  clock CLK (rise edge)                  3.0000     3.0000
+  clock network delay (ideal)            0.0000     3.0000
+  clock uncertainty                     -0.0500     2.9500
+  mult/res_mat_reg[31]/CK (DFFXL)        0.0000     2.9500 r
+  library setup time                    -0.1170     2.8330
+  data required time                                2.8330
+  -----------------------------------------------------------
+  data required time                                2.8330
+  data arrival time                                -2.8329
+  -----------------------------------------------------------
+  slack (MET)                                       0.0000
+
+
+1
